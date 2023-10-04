@@ -1,4 +1,3 @@
-#include <stdio.h>
 /*
 +Solicita al usuario que ingrese un número entero positivo "n" que representa el rango.
 +El programa buscará números perfectos en el rango de 1 a "n".
@@ -6,11 +5,13 @@
 +Si encuentras un número perfecto, muestra ese número y sus divisores propios positivos.
 +Después de encontrar todos los números perfectos en el rango, pregunta al usuario si desea buscar números perfectos en otro rango. Si la respuesta es afirmativa, el programa debe repetirse; de lo contrario, debe finalizar.
 */
+#include <stdio.h>
+#include "RRD.h"
 int main()
 {
     int n, i, j,l, acu;
-    printf("Ingrese un numero entero positivo para el rango\n");
-    scanf("%d", &n);
+    n=validarnumeros("Ingrese un numero entero positivo para el rango\n",1,10000);
+
     for (i = 1; i <= n; i++)
     {
         acu = 0;
